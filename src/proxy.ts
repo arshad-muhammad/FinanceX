@@ -5,8 +5,8 @@ export function proxy(request: NextRequest) {
   const isAuth = request.cookies.has("site_auth");
   const { pathname } = request.nextUrl;
 
-  // Allow access to /login and /admin without site_auth cookie
-  if (!isAuth && pathname !== "/login" && pathname !== "/admin") {
+  // Allow access to /login and /sh-admin-sh without site_auth cookie
+  if (!isAuth && pathname !== "/login" && pathname !== "/sh-admin-sh") {
     return NextResponse.redirect(new URL("/login", request.url));
   }
 

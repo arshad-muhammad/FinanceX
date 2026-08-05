@@ -626,29 +626,26 @@ export default function AdminPage() {
                 <Lock className="w-5 h-5" />
               </div>
               <h1 className="text-xl font-bold text-white tracking-tight">Admin Console Lock</h1>
-              <p className="text-xs text-text-secondary mt-1">
-                Enter your administrative key to unlock CRUD database controls.
-              </p>
             </div>
 
             <form onSubmit={handleAdminLogin} className="space-y-4">
               <div>
                 <label className="block text-[10px] font-bold text-text-secondary uppercase tracking-wider mb-2">
-                  Admin Email
+                  Email Id
                 </label>
                 <input
                   type="email"
                   required
                   value={adminEmail}
                   onChange={(e) => setAdminEmail(e.target.value)}
-                  placeholder="arshad@kvgce.ac.in"
+                  placeholder="Enter Email"
                   className="w-full px-4.5 py-3 bg-background border border-border-subtle rounded-[14px] text-white placeholder-text-secondary focus:outline-none focus:ring-1 focus:ring-primary-accent focus:border-transparent transition-all text-xs font-semibold"
                 />
               </div>
 
               <div>
                 <label className="block text-[10px] font-bold text-text-secondary uppercase tracking-wider mb-2">
-                  Admin Password
+                  Password
                 </label>
                 <div className="relative">
                   <input

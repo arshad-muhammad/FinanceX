@@ -17,18 +17,6 @@ A modern, responsive, and secure web application built using **Next.js (App Rout
 
 ---
 
-## Configuration & Credentials
-
-The authentication credentials are configured in:
-📄 `src/lib/constants.ts`
-
-- **Site Password**: `asdf`
-- **Admin Key**: `Admin`
-
-> [!NOTE]
-> For production deployments, these constants should be moved to environment variables (`.env`) and read via `process.env` to prevent leaking secrets in client bundles.
-
----
 
 ## Local Setup Instructions
 

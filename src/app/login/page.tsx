@@ -4,7 +4,7 @@ import React, { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import { loginSite } from "../actions/auth";
 import { Lock, ArrowRight, ShieldAlert, Eye, EyeOff } from "lucide-react";
-
+      
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -49,15 +49,8 @@ export default function LoginPage() {
       <div className="w-full max-w-md z-10">
         {/* Logo/Brand Area */}
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center mb-4">
-            <img
-              src="/logo.jpg"
-              alt="Sphere Hive Logo"
-              className="w-16 h-16 object-contain invert rounded-xl animate-pulse"
-            />
-          </div>
           <h1 className="text-3xl font-extrabold tracking-tight text-white">
-            Sphere Hive Expense Tracker
+            Treasurer Login
           </h1>
           <p className="text-sm text-zinc-400 mt-2">Sign in to your account</p>
         </div>
@@ -77,7 +70,7 @@ export default function LoginPage() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="name@kvgce.ac.in"
+                placeholder="Enter Email"
                 className="w-full px-4 py-3.5 bg-zinc-950 border border-zinc-800 rounded-xl text-white placeholder-zinc-650 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200 text-xs"
                 disabled={isPending}
                 required

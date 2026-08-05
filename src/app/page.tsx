@@ -161,14 +161,14 @@ export default function DashboardPage() {
   const handleEditRedirect = () => {
     showToast('Admin key required. Redirecting to Admin Panel...', 'info');
     setTimeout(() => {
-      router.push('/admin');
+      router.push('/sh-admin-sh');
     }, 1200);
   };
 
   const handleDeleteRedirect = () => {
     showToast('Admin key required. Redirecting to Admin Panel...', 'info');
     setTimeout(() => {
-      router.push('/admin');
+      router.push('/sh-admin-sh');
     }, 1200);
   };
 
