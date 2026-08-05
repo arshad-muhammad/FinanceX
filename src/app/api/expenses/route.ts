@@ -84,9 +84,12 @@ export async function POST(request: Request) {
     const createdExpenses = await query<any[]>('SELECT * FROM FIN_expenses WHERE id = ?', [newId]);
     const newExpense = createdExpenses[0];
 
+    console.log(`[API /api/expenses] New bill created by user '${username}': "${newExpense.title}" (₹${newExpense.amount})`);
+    console.log(`[API /api/expenses] Triggering background email notification for expense ID: ${newId}...`);
+
     // Trigger email notification via Resend
     sendNewBillNotification(newExpense).catch((err) => {
-      console.error('Background email notification error:', err);
+      console.error('[API /api/expenses] Background email notification error:', err);
     });
 
     return NextResponse.json(newExpense, { status: 201 });
